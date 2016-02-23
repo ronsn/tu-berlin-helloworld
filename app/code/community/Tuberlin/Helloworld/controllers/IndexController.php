@@ -11,6 +11,11 @@ class Tuberlin_Helloworld_IndexController extends Mage_Core_Controller_Front_Act
     {
         print_r( Mage::getVersionInfo() );
     }
+    
+    public function phpinfoAction()
+    {
+        phpinfo();
+    }
 
     public function getdesignAction()
     {

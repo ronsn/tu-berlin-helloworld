@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Tuberlin_Helloworld>
+            <version>0.0.1.0</version>
+        </Tuberlin_Helloworld>
+    </modules>
+
+    <frontend>
+        <!-- secure_url>
+            <helloworld_foo>/helloworld/foo</helloworld_foo>
+        </secure_url -->
+        <routers>
+            <!-- Das <helloworld>-Tag scheint willkuerlich gewaehlt zu
+            sein, aber es soll mit dem Wert des Tags <frontName>
+            uebereinstimmen -->
+            <helloworld>
+                <use>standard</use>
+                <args>
+                    <module>Tuberlin_Helloworld</module>
+                    <frontName>helloworld</frontName>
+                </args>
+            </helloworld>
+        </routers>
+    </frontend>
+
+</config>

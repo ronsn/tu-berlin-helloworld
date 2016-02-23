@@ -1,0 +1,3 @@
+app/code/community/Tuberlin/* app/code/community/Tuberlin/*
+app/design/frontend/default/mydesign/* app/design/frontend/default/mydesign/*
+app/etc/modules/Tuberlin_Helloworld.xml app/etc/modules/Tuberlin_Helloworld.xml

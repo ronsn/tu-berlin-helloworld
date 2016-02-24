@@ -4,6 +4,7 @@
         <Tuberlin_Helloworld>
             <active>true</active>
             <codePool>community</codePool>
+            <depends></depends>
         </Tuberlin_Helloworld>
     </modules>
 </config>

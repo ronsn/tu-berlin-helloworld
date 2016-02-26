@@ -11,7 +11,37 @@ class Tuberlin_Helloworld_IndexController extends Mage_Core_Controller_Front_Act
     {
         print_r( Mage::getVersionInfo() );
     }
-    
+
+    public function redirectedAction()
+    {
+        echo 'Du wurdest erfolgreich redirected :)';
+        echo '<br />';
+        echo 'Moechtest du dir die Parameter anzeigen lassen?';
+        $url = Mage::getUrl('helloworld/index/getParams/');
+        foreach( $this->getRequest()->getParams() as $param => $value )
+        {
+            $url .= $param . '/' . $value . '/';
+        }
+        echo '<br />';
+        echo '<a href="' . $url . '"> [Anzeigen] </a>.';
+        echo '<br />';
+        $url = Mage::getUrl('helloworld/foo/redirect');
+        echo 'Oder Noch mal redirecten? Dann klicke <a href="' . $url . '">hier</a>.';
+
+        echo '<br />';
+        $url = Mage::getUrl('helloworld/foo/redirectWithRandomParams');
+        echo 'Oder Noch mal mit zufaelligen Parametern redirecten? Dann klicke <a href="' . $url . '">hier</a>.';
+    }
+
+    public function getParamsAction()
+    {
+        #echo $this->getRequest()->getParam('index');
+        #echo $this->getRequest()->getParam('fuck');
+        foreach( $this->getRequest()->getParams() as $param => $value )
+        {
+            echo $param . ' => ' . $value . '<br />';
+        }
+    }
     public function phpinfoAction()
     {
         phpinfo();

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<layout version="0.1.0">
+    <tu-berlin_helloworld_index_index>
+        <reference name="content">
+            <block type="core/template" name="tu-berlin_helloworld_index" template="helloworld/index.phtml" />
+        </reference>
+    </tu-berlin_helloworld_index_index>
+</layout>

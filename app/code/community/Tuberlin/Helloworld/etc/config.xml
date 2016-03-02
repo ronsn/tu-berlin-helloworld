@@ -24,4 +24,14 @@
         </routers>
     </frontend>
 
+    <frontend>
+        <layout>
+            <updates>
+                <tu-berlin_helloworld>
+                    <file>helloworld.xml</file>
+                </tu-berlin_helloworld>
+            </updates>
+        </layout>
+    </frontend>
+
 </config>

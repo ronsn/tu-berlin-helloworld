@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <config>
     <modules>
-        <Tuberlin_Helloworld>
+        <tu-berlin_helloworld>
             <version>0.0.1.0</version>
-        </Tuberlin_Helloworld>
+        </tu-berlin_helloworld>
     </modules>
 
     <frontend>
@@ -14,17 +14,15 @@
             <!-- Das <helloworld>-Tag scheint willkuerlich gewaehlt zu
             sein, aber es soll mit dem Wert des Tags <frontName>
             uebereinstimmen -->
-            <helloworld>
+            <tu-berlin_helloworld>
                 <use>standard</use>
                 <args>
                     <module>Tuberlin_Helloworld</module>
                     <frontName>helloworld</frontName>
                 </args>
-            </helloworld>
+            </tu-berlin_helloworld>
         </routers>
-    </frontend>
-
-    <frontend>
+        
         <layout>
             <updates>
                 <tu-berlin_helloworld>
@@ -32,6 +30,7 @@
                 </tu-berlin_helloworld>
             </updates>
         </layout>
+        
     </frontend>
 
 </config>

@@ -5,7 +5,7 @@ class Tuberlin_Helloworld_IndexController extends Mage_Core_Controller_Front_Act
     {
         $this->loadLayout();
         #echo 'IndexAction ausgeloest...';
-        $testvar = 'DIES IST MEINE TESTVRIABLE';
+        #$testvar = 'DIES IST MEINE TESTVRIABLE';
         $this->renderLayout();
         #die('###########################################');
     }

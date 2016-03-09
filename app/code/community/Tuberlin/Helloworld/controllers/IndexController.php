@@ -1,13 +1,21 @@
 <?php
 class Tuberlin_Helloworld_IndexController extends Mage_Core_Controller_Front_Action
 {
+    public $myVar = 'TEST';
     public function indexAction()
     {
         $this->loadLayout();
-        #echo 'IndexAction ausgeloest...';
-        #$testvar = 'DIES IST MEINE TESTVRIABLE';
-        $this->renderLayout();
-        #die('###########################################');
+        // create a generic template block
+        $block = $this->getLayout()->createBlock('core/template');
+        
+        // Assign my own template to it
+        // (this path is relative to my current theme e.g.: rwd/default/template/...
+        $block->setTemplate('helloworld/index.phtml');
+        $block->addData(array('key' => 'Valow'));
+        echo $block->escapeHtml('<h1>Hello from Controller</h1>');
+        
+        #echo $block->toHtml();
+        $this->renderLayout($block->toHtml());
     }
 
     public function infoAction()
@@ -53,7 +61,8 @@ class Tuberlin_Helloworld_IndexController extends Mage_Core_Controller_Front_Act
     public function getdesignAction()
     {
         echo '<pre>';
-        print_r(Mage::getDesign());
+        #print_r(Mage::getDesign());
+        echo 'Aktuelles Design-Package (Name): ' . Mage::getDesign()->getPackageName();
         echo '</pre>';
     }
 

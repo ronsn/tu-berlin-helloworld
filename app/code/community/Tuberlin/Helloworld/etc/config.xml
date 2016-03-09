@@ -7,6 +7,13 @@
     </modules>
 
     <frontend>
+        <layout>
+            <updates>
+                <tu-berlin_helloworld>
+                    <file>helloworld.xml</file>
+                </tu-berlin_helloworld>
+            </updates>
+        </layout>
         <!-- secure_url>
             <helloworld_foo>/helloworld/foo</helloworld_foo>
         </secure_url -->
@@ -22,15 +29,7 @@
                 </args>
             </tu-berlin_helloworld>
         </routers>
-        
-        <layout>
-            <updates>
-                <tu-berlin_helloworld>
-                    <file>helloworld.xml</file>
-                </tu-berlin_helloworld>
-            </updates>
-        </layout>
-        
+
     </frontend>
 
 </config>

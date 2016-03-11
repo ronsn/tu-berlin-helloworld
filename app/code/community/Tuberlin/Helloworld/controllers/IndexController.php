@@ -86,4 +86,20 @@ class Tuberlin_Helloworld_IndexController extends Mage_Core_Controller_Front_Act
         print_r(Mage::getModuleDir("array", "Tuberlin_Helloworld"));
         echo '</pre>';
     }
+    
+    public function fromAAction()
+    {
+        $url = Mage::getUrl('helloworld/index/fromB/');
+        echo 'You came from: ';
+        echo (false !== $this->getRequest()->getHeader('referer')) ? $this->getRequest()->getHeader('referer') . ' ' : 'Unknown URL ';
+        echo '<a href="' . $url . '">Go to B</a>';
+    }
+    
+    public function fromBAction()
+    {
+        $url = Mage::getUrl('helloworld/index/fromA/');
+        echo 'You came from: ';
+        echo (false !== $this->getRequest()->getHeader('referer')) ? $this->getRequest()->getHeader('referer')  . ' ' : 'Unknown URL ';
+        echo '<a href="' . $url . '">Go to A</a>';
+    }
 }

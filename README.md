@@ -12,5 +12,3 @@ Wenn dieses "Modul" noch nicht vorhanden ist, dann:
 
 Wenn dieses "Modul" schon vorhanden ist, aber eine neue Version existiert, dann:
 <br /><code>modman update tu-berlin-helloworld</code>
-
-<script type="text/javascript">console.log('javascript geloggt');</script>
